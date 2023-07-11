@@ -21,7 +21,7 @@ repetitive_patters = list(map(re.compile,[r"　",r"・",r"区"]))
 
 def basic_cleanup(input_file,output_file,required_remain_ratio=0.5):
     with open(output_file,'w') as f:
-        for line in tqdm(open(input_file).readlines()):
+        for line in tqdm(open(input_file)):
 
             data=json.loads(line)
 
